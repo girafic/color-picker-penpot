@@ -1,0 +1,12 @@
+{
+  "name": "Color Picker",
+  "description": "Color Picker plugin allows you to easily pick colors from the screen.",
+  "code": "plugin.js",
+  "icon": "/assets/color_picker_icon.png",
+  "permissions": [
+    "content:read",
+    "content:write",
+    "library:read",
+    "library:write"
+  ]
+}

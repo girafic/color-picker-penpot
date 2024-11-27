@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Picker</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tracking-container">
+        <span class="tracking-label">Selected shapes:</span>
+        <span id="tracking-status">0</span>
+      </div>
+      <div class="color-preview-container">
+        <div class="color-preview-value-wrapper">
+          <div
+            id="color-preview"
+            role="button"
+            title="Click to open color picker"
+          ></div>
+          <input
+            type="color"
+            id="color-value"
+            class="visually-hidden"
+            value="#000000"
+          />
+          <span id="color-text">#000000</span>
+        </div>
+        <button
+          type="button"
+          id="eyedropper"
+          data-appearance="button"
+          title="Pick Color"
+        >
+          <svg
+            viewBox="0 0 16 16"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M8.82 5.134 7.756 4.073A1 1 0 0 1 9.17 2.658l.707.707L12 1.244a2 2 0 1 1 2.828 2.828l-2.12 2.122.706.707A.999.999 0 1 1 12 8.315l-1.06-1.06m0 0L8.818 5.134l-6.91 7.435a.93.93 0 0 0-.149.208l-.213.398c-.468.872.481 1.822 1.354 1.353l.397-.213a.93.93 0 0 0 .208-.149l7.435-6.911z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div class="checkbox-container">
+        <input
+          class="checkbox-input"
+          type="checkbox"
+          id="override-color"
+          value="override-color"
+          checked
+        />
+        <label for="override-color" class="body-small"
+          >Override existing fills</label
+        >
+      </div>
+      <div class="checkbox-container">
+        <input
+          class="checkbox-input"
+          type="checkbox"
+          id="as-stroke"
+          value="as-stroke"
+        />
+        <label for="as-stroke" class="body-small">As stroke</label>
+      </div>
+      <button id="add-to-palette" data-appearance="button">
+        Add to color palette
+      </button>
+      <div id="notification-container"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
